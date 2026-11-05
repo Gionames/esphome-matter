@@ -455,3 +455,6 @@ def _build_data(values, fields) -> str:
 def _resolve_endpoint_id(endpoint_id: ID | int) -> int:
     endpoints = CORE.data.get(CONF_MATTER, {}).get(CONF_ENDPOINTS)
     return endpoints.lookup(endpoint_id).endpoint_id
+
+
+from . import fabric_actions  # noqa: E402,F401
